@@ -1,0 +1,50 @@
+html {
+    direction: rtl;
+}
+body{
+    font-family: pelak;
+}
+
+/* چون اگر در یگ المنت بخواهیم از کانتنت باکس استفاده کنیم بتوانیم به خود المنت
+این را اضافه کنیم و چون ارث بری میکند مشکلی ندارد وگرنه باکس سایزینگ ارث بری نمیشود */
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+li{
+    list-style-type: none;
+}
+h2{
+    margin: 0.5em;
+}
+.clearFix::after,
+.clearFix::before{
+content: '';
+display: table;
+}
+.clearFix::after{
+    clear: both;
+}
+.flex{
+    display: flex;
+}
+select , input{
+    font-family: inherit;
+}
