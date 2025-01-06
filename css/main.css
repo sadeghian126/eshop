@@ -105,55 +105,66 @@
     font-size: 2.5em;
     margin: 0 10px;
 }
-.submenuContaner{
-    display: none;
-}
-.mainNavList {
-    position: relative;
-}
+
+
+
+
 .manNavItemLink {
     padding: 5px 5px;
     margin: 0 5px;
-    position: relative;
+
 }
 
-.manNavItemLink::before {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: rgb(226, 132, 24);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: scale(0);
-    transition: all 0.2s linear;
-}
 
 .manNavItemLink:hover {
     color: #fff;
 }
 
-.manNavItemLink:hover::before {
 
-    transform: scale(100%);
+
+
+
+.mainNavList {
+    position: relative;
+
 }
 
-
-.mainNavListItem:hover>.submenuContaner{
-    display: block;
+.mainNavLinkContaner {
+    position: relative;
 }
-.mainNavItemContaner {
+
+.hotcat::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/icons/jadid.png);
+    position: absolute;
+    top: -33px;
+    right: 26px;
+}
+.manNavItemLink::after{
+    content: '';
+    background-color: rgb(226, 132, 24);
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    transform: scale(0);
+    transition: all 0.2s linear;
+}
+.submenuContaner {
     height: 200px;
     width: 100%;
     right: 0;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #e9e9e9;
     justify-content: space-between;
-
-  
+    display: none;
 }
 
 .mainNavItemCList {
+    height: 200px;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -161,11 +172,19 @@
     flex-grow: 1;
 
 }
-
-
-.manNavItemLink:hover>.mainNavItemContaner {
+.mainNavListItem:hover>.mainNavLinkContaner>.manNavItemLink::after{
+    transform: scale(100%);
+}
+.mainNavListItem:hover>.submenuContaner {
     display: block;
 }
+
+.mainNavItemClistItem {
+    color: black;
+    font-size: 0.95em;
+}
+
+
 
 .mainNavContanerImg {
     width: 100px;
