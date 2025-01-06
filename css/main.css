@@ -13,15 +13,24 @@
 
 }
 
-.signiconLink {
-    padding: 5px;
-    margin: 0 10px;
-}
-
 .topinfo {
     justify-content: space-between;
     border-bottom: 1px solid rgb(31, 40, 65);
+}
 
+.header a {
+    transition: all 0.3s linear;
+
+}
+
+.signiconLink {
+    padding: 5px;
+    margin: 0 10px;
+
+}
+
+.signiconLink:hover {
+    color: #fff;
 }
 
 .langicon {
@@ -40,46 +49,127 @@
     font-size: 0.7em;
     background-color: unset;
     color: rgb(218, 218, 218);
-    margin: 0 5px ;
+    margin: 0 5px;
 }
-.mainLogo{
+
+.mainLogo {
     padding: 20px 40px;
 }
-.mainLogoIcon{
+
+.mainLogoIcon {
     width: 50px;
 
 }
-.toplogo{
+
+.toplogo {
     align-items: center;
+    border-bottom: 1px solid rgb(31, 40, 65);
 }
-.serchBar{
+
+.serchBar {
     justify-content: center;
     flex-grow: 1;
 }
-.serchBar>select{
+
+.serchBar>select {
     border: none;
     border-radius: 0 20px 20px 0;
 }
-.selectCategory{
+
+.selectCategory {
     height: 30px;
 }
-.serchInput{
+
+.serchInput {
     font-size: 0.8em;
     border: none;
     padding: 7px 0;
     width: 50%;
 }
-.serchLink{
+
+.serchLink {
     background-color: rgb(226, 132, 24);
     padding: 5px 10px;
     border-radius: 20px 0 0 20px;
 }
-.callInfo , .selerInfo{
+
+.callInfo,
+.selerInfo {
     align-items: center;
     font-size: 0.8em;
     margin: 0 10px;
 }
-.callInfo>i , .selerInfo>i{
+
+.callInfo>i,
+.selerInfo>i {
     font-size: 2.5em;
     margin: 0 10px;
+}
+.submenuContaner{
+    display: none;
+}
+.mainNavList {
+    position: relative;
+}
+.manNavItemLink {
+    padding: 5px 5px;
+    margin: 0 5px;
+    position: relative;
+}
+
+.manNavItemLink::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgb(226, 132, 24);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: scale(0);
+    transition: all 0.2s linear;
+}
+
+.manNavItemLink:hover {
+    color: #fff;
+}
+
+.manNavItemLink:hover::before {
+
+    transform: scale(100%);
+}
+
+
+.mainNavListItem:hover>.submenuContaner{
+    display: block;
+}
+.mainNavItemContaner {
+    height: 200px;
+    width: 100%;
+    right: 0;
+    position: absolute;
+    background-color: #ffffff;
+    justify-content: space-between;
+
+  
+}
+
+.mainNavItemCList {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 25%;
+    flex-grow: 1;
+
+}
+
+
+.manNavItemLink:hover>.mainNavItemContaner {
+    display: block;
+}
+
+.mainNavContanerImg {
+    width: 100px;
+    height: 100px;
+    margin: auto 20px auto 50px;
+
 }
