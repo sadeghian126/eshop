@@ -246,13 +246,14 @@
     width: 40%;
     flex-grow: 2;
     margin: 10px;
-    
+
 }
 
-.topSelerImg{
-    border: 1px solid gray;
+.topSelerImg {
+    border: 1px solid #eee;
     margin: 30px 30px 10px 0;
 }
+
 .topselerlist_p {
     flex-wrap: wrap;
     height: 100%;
@@ -260,7 +261,7 @@
 
 .topselerlistitem {
     width: 33%;
-margin: 10px 0;
+    margin: 10px 0;
 }
 
 
@@ -316,12 +317,14 @@ margin: 10px 0;
     transition: all 0.1s linear;
 }
 
-.topSelerList_c:hover .overlay {
+.topSelerList_c:hover .overlay,
+.N_P_I_listContaner:hover .overlay {
     opacity: 1;
     top: 0;
 }
 
-.topSelerList_c:hover .overlybtn {
+.topSelerList_c:hover .overlybtn,
+.N_P_I_listContaner:hover .overlybtn {
     opacity: 1;
     top: 50%;
 }
@@ -337,9 +340,194 @@ margin: 10px 0;
 
 .topSelerList_c {
     margin: 10px;
-    border: 1px solid gray;
+    border: 1px solid #eee;
 }
 
-.topselerlistitem:hover>.topSelerList_c>h3 {
+.topselerlistitem:hover>.topSelerList_c>h3,
+.N_P_I_list:hover>.N_P_I_listContaner>h3 {
     color: rgb(226, 132, 24);
+}
+
+.banner1 {
+    padding: 10px;
+}
+
+.bannerContainer {
+    width: 100%;
+    height: 300px;
+
+    position: relative;
+
+}
+
+.bannerContainer>img {
+    width: 100%;
+    height: 100%;
+}
+
+.bannerContainer::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: black;
+    opacity: 0.3;
+    transform: scaley(0);
+    transition: all 0.2s linear;
+}
+
+.bannerContainer:hover::before {
+    transform: scaley(1);
+}
+
+.N_P_I_list {
+    width: 25%;
+
+}
+
+.N_P_I_listContaner {
+    margin: 10px;
+    border: solid 1px #eee;
+}
+
+.collectionListItemContaner {
+    border: 3px solid transparent;
+    background-color: rgb(212, 212, 212);
+    text-align: center;
+    margin: 10px;
+}
+
+.collectionListItemContaner:hover {
+    border-bottom: 3px solid burlywood;
+}
+
+.collectionListItem {
+    width: 16.5%;
+    flex-wrap: 1;
+}
+
+.hotSaleCont {
+    margin: 10px;
+}
+
+.hotsaleList {
+    flex-wrap: wrap;
+}
+
+.hotsaleListItem {
+    width: 33%;
+    flex-grow: 1;
+}
+
+
+.hotcategury {
+    background-color: #eee;
+}
+
+.hotcateguryListItem {
+    width: 25%;
+    flex-grow: 1;
+
+}
+
+.hotcateguryListItemContaner {
+    align-items: center;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.hotcatImg>img {
+    width: 80px;
+    height: 60px;
+}
+
+.hotcatmeniitem {
+    list-style-type: square;
+}
+
+.hocatmenucontaner {
+    margin: 10px 30px 10px 10px;
+}
+
+
+/*footer*/
+.footer {
+    background-color: rgb(49, 49, 75);
+    color: #fff;
+}
+.footmenu{
+    padding: 10px;
+}
+.fotinfo {
+    width: 25%;
+}
+
+.fotinfo {
+    margin: 10px;
+}
+
+.footlistItem {
+    position: relative;
+    transition: all 0.2s linear;
+}
+
+.footlistItem:hover {
+    color: rgb(233, 167, 120);
+    padding-right: 12px;
+}
+
+.footlistItem::before {
+    width: 0;
+    height: 0;
+    right: 0;
+    top: 15px;
+    background-color: burlywood;
+    position: absolute;
+    content: '';
+    transition: all 0.2s linear;
+}
+
+.footlistItem:hover::before {
+    width: 8px;
+    height: 1px;
+}
+
+.newsserch {
+    align-items: center;
+    padding: 50px 0;
+}
+
+.emailBox {
+    align-items: center;
+    width: 60%;
+    
+}
+
+.social {
+
+    width: 40%;
+}
+.emailBox>h2{
+    width: 40%;
+}
+.emailEnputBox>input {
+    border: none;
+    padding: 5px 0;
+    border-radius: 0 15px 15px 0;
+
+}
+
+.emailEnputBox>button {
+    border: none;
+    padding: 5px 15px;
+    border-radius: 15px 0 0 15px;
+    background-color: chocolate;
+    color: #fff;
+}
+
+.copyr{
+    text-align: center;
 }
